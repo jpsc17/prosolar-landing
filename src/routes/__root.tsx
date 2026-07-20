@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Prosolar | Energia Solar Fotovoltaica" },
+      { name: "description", content: "Prosolar — Energia solar chave na mão em Belém e Região Metropolitana. Economia de até 95%." },
+      { name: "author", content: "Prosolar Energia Fotovoltaica" },
+      { property: "og:title", content: "Prosolar | Energia Solar Fotovoltaica" },
+      { property: "og:description", content: "Projetos fotovoltaicos residenciais, comerciais e rurais no Pará." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@Prosolar" },
     ],
     links: [
       {
@@ -102,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
