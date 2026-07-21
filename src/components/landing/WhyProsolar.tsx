@@ -91,10 +91,10 @@ export function WhyProsolar() {
           {/* Right — visual */}
           <div className={`relative transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
             <div className="absolute -inset-4 rounded-3xl bg-navy/5 -z-10" />
-            {/* TODO: Replace with real team/engineer photo → /projetos/equipe.jpg */}
+            {/* SUBSTITUIR POR FOTO REAL DA PROSOLAR — Equipe/engenheiro */}
             <img
-              src="/hero-solar.png"
-              alt="Instalação solar premium Prosolar — Imagem real do projeto: substituir posteriormente"
+              src="/projetos/projeto-residencial.jpg"
+              alt="Projeto solar Prosolar — Instalação real"
               className="w-full rounded-2xl object-cover shadow-xl aspect-[4/5]"
               loading="lazy"
             />

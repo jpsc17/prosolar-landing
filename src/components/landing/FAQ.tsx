@@ -6,7 +6,7 @@ const FAQS = [
   {
     question: "Quanto custa um sistema de energia solar?",
     answer:
-      "O investimento depende do seu consumo mensal. Um sistema residencial para uma conta de R$ 500/mês gira em torno de R$ 20.000 a R$ 30.000. Mas lembre-se: o sistema se paga com a economia gerada e ainda valoriza seu imóvel. Oferecemos financiamento em até 84x com parcelas menores que sua conta de luz atual.",
+      "O investimento depende do seu consumo mensal. Um sistema residencial para uma conta de R$ 500/mês gira em torno de R$ 20.000 a R$ 30.000. Mas lembre-se: o sistema se paga com a economia gerada e ainda valoriza seu imóvel. Oferecemos parcelamento facilitado com condições comerciais simplificadas.",
   },
   {
     question: "Quanto vou economizar na conta de luz?",
@@ -21,17 +21,17 @@ const FAQS = [
   {
     question: "Precisa de manutenção?",
     answer:
-      "A manutenção é mínima. Recomenda-se apenas uma limpeza dos painéis a cada 6-12 meses (água e sabão neutro). No Pará, a chuva natural já ajuda bastante. A Prosolar oferece monitoramento remoto que identifica qualquer anomalia automaticamente.",
+      "A manutenção é mínima. Recomenda-se apenas uma limpeza dos painéis a cada 6-12 meses (água e sabão neutro). Na Região Norte, a chuva natural já ajuda bastante. A Prosolar oferece monitoramento remoto que identifica qualquer anomalia automaticamente.",
   },
   {
-    question: "Como funciona o financiamento?",
+    question: "Como funciona o parcelamento?",
     answer:
-      "Trabalhamos com as principais linhas de crédito para energia solar do mercado, com taxas a partir de 0,99% ao mês e prazos de até 84 meses. Na maioria dos casos, a parcela do financiamento é menor que a conta de energia antiga — ou seja, você já economiza desde o dia 1.",
+      "Trabalhamos com condições comerciais simplificadas e sem burocracia bancária. Na maioria dos casos, a parcela é menor que a conta de energia antiga — ou seja, você já economiza desde o dia 1. Aprovação rápida e processo descomplicado.",
   },
   {
     question: "Quanto tempo até o retorno do investimento?",
     answer:
-      "No Pará, devido à alta irradiação solar, o retorno varia de 3 a 5 anos. Considerando a vida útil de 25+ anos do sistema, são mais de 20 anos de energia praticamente gratuita após o payback.",
+      "Na Região Norte, devido à alta irradiação solar, o retorno varia de 3 a 5 anos. Considerando a vida útil de 25+ anos do sistema, são mais de 20 anos de energia praticamente gratuita após o payback.",
   },
 ];
 
@@ -40,7 +40,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
+    <section id="faq" className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

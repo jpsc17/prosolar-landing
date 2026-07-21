@@ -44,7 +44,7 @@ function calculateSolar(monthlyBill: number) {
 export function Simulator() {
   const [profile, setProfile] = useState<string>("residencial");
   const [bill, setBill] = useState<number>(500);
-  const [city, setCity] = useState<string>("Belém");
+  const [city, setCity] = useState<string>("Boa Vista - RR");
   const [showResult, setShowResult] = useState(false);
   const { ref, isVisible } = useScrollAnimation();
 

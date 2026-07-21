@@ -20,14 +20,14 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.05)]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-[72px] items-center justify-between">
-          {/* Logo — 25-35% larger for premium feel */}
-          <a href="#top" className="flex items-center gap-3 group shrink-0">
+          {/* Logo — Proporções premium (Tesla/Stripe style) */}
+          <a href="#top" className="flex items-center gap-[14px] group shrink-0">
             <img
               src="/logo.png"
               alt="Prosolar Energia Solar"
-              className="h-[52px] w-[52px] object-contain transition-transform group-hover:scale-105"
+              className="h-[32px] w-[32px] lg:h-[38px] lg:w-[38px] object-contain transition-transform group-hover:scale-105"
             />
-            <span className="text-2xl font-bold tracking-tight text-navy font-heading">
+            <span className="text-[30px] lg:text-[36px] leading-none font-bold tracking-tight text-navy font-heading">
               Prosolar
             </span>
           </a>

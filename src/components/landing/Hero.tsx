@@ -5,7 +5,7 @@ const WHATSAPP_URL = "https://wa.me/5591982298619?text=Ol%C3%A1!%20Gostaria%20de
 const TRUST_BADGES = [
   { icon: ShieldCheck, text: "CREA Regularizado" },
   { icon: Key, text: "Projeto Chave na Mão" },
-  { icon: CreditCard, text: "Financiamento até 84x" },
+  { icon: CreditCard, text: "Parcelamento Facilitado" },
   { icon: MapPin, text: "Toda a Região Norte" },
 ];
 
@@ -76,9 +76,9 @@ export function Hero() {
             {/* Glow behind image */}
             <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-solar/20 via-transparent to-navy/10 blur-3xl" />
 
-            {/* TODO: Replace with real project photo at /public/projetos/hero.jpg */}
+            {/* SUBSTITUIR POR FOTO REAL DA PROSOLAR — Hero principal */}
             <img
-              src="/hero-solar.png"
+              src="/projetos/projeto-comercial.png"
               alt="Instalação solar premium pela Prosolar na Região Norte do Brasil"
               className="w-full rounded-2xl object-cover shadow-2xl aspect-[4/5] lg:aspect-[3/4]"
               loading="eager"

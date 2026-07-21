@@ -33,7 +33,7 @@ export function HowItWorks() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
+    <section id="como-funciona" className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`mx-auto max-w-3xl text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

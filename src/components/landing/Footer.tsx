@@ -2,7 +2,7 @@ import { Sun, Phone, MapPin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-navy-dark py-14 text-white">
+    <footer id="contato" className="bg-navy-dark py-14 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
@@ -16,7 +16,7 @@ export function Footer() {
               <span className="font-heading text-xl font-extrabold">Prosolar</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              Prosolar Energia Fotovoltaica. Engenharia solar chave na mão para residências, empresas e propriedades rurais no Pará.
+              Prosolar Energia Fotovoltaica. Engenharia solar chave na mão para residências, empresas e propriedades rurais em toda a Região Norte.
             </p>
           </div>
 
@@ -38,8 +38,8 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-solar" />
-                <a href="mailto:contato@prosolar.eng.br" className="transition-colors hover:text-solar">
-                  contato@prosolar.eng.br
+                <a href="mailto:prosolarpara@gmail.com" className="transition-colors hover:text-solar">
+                  prosolarpara@gmail.com
                 </a>
               </li>
             </ul>

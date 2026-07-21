@@ -5,8 +5,10 @@ import { AuthorityBar } from "../components/landing/AuthorityBar";
 import { Simulator } from "../components/landing/Simulator";
 import { Benefits } from "../components/landing/Benefits";
 import { HowItWorks } from "../components/landing/HowItWorks";
+import { CommercialSection } from "../components/landing/CommercialSection";
 import { SocialProof } from "../components/landing/SocialProof";
 import { WhyProsolar } from "../components/landing/WhyProsolar";
+import { RegionalPresence } from "../components/landing/RegionalPresence";
 import { Testimonials } from "../components/landing/Testimonials";
 import { FAQ } from "../components/landing/FAQ";
 import { FinalCTA } from "../components/landing/FinalCTA";
@@ -17,27 +19,27 @@ export const Route = createFileRoute("/")(
   {
     head: () => ({
       meta: [
-        { title: "Prosolar | Energia Solar Fotovoltaica em Belém, PA — Economia de até 95%" },
+        { title: "Prosolar | Energia Solar Fotovoltaica na Região Norte — Economia de até 95%" },
         {
           name: "description",
           content:
-            "Reduza sua conta de luz em até 95% com projetos fotovoltaicos chave na mão em Belém e Região Metropolitana. Simulação gratuita. Financiamento em até 84x. Engenharia CREA-PA.",
+            "Reduza sua conta de luz em até 95% com projetos fotovoltaicos chave na mão em toda a Região Norte. Simulação gratuita. Parcelamento facilitado. Engenharia CREA.",
         },
         {
           property: "og:title",
-          content: "Prosolar | Energia Solar Fotovoltaica em Belém, PA",
+          content: "Prosolar | Energia Solar Fotovoltaica na Região Norte",
         },
         {
           property: "og:description",
           content:
-            "Projetos fotovoltaicos residenciais, comerciais e rurais no Pará. Engenharia CREA-PA, instalação profissional e economia real de até 95%.",
+            "Projetos fotovoltaicos residenciais, comerciais e rurais em toda a Região Norte. Empresa consolidada em Roraima, em expansão para o Pará. Engenharia CREA, instalação profissional e economia real de até 95%.",
         },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
         {
           name: "keywords",
           content:
-            "energia solar belém, painel solar pará, fotovoltaico belém, prosolar, economia energia solar, instalação solar belém, CREA-PA energia solar",
+            "energia solar pará, energia solar região norte, energia solar roraima, energia solar boa vista, energia fotovoltaica pará, empresa de energia solar no pará, instalação de energia solar região norte, prosolar, economia energia solar",
         },
       ],
     }),
@@ -54,9 +56,11 @@ function LandingPage() {
         <AuthorityBar />
         <Simulator />
         <Benefits />
+        <CommercialSection />
         <HowItWorks />
         <SocialProof />
         <WhyProsolar />
+        <RegionalPresence />
         <Testimonials />
         <FAQ />
         <FinalCTA />

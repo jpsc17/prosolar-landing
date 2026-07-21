@@ -11,37 +11,34 @@ const WHATSAPP_URL = "https://wa.me/5591982298619?text=Ol%C3%A1!%20Vi%20os%20cas
  */
 const CASES = [
   {
-    /* TODO: Substituir por foto real → /projetos/projeto-residencial.jpg */
-    image: "/proof-residential.png",
+    // SUBSTITUIR POR FOTO REAL DA PROSOLAR — Residencial
+    image: "/projetos/projeto-residencial.jpg",
     type: "Residencial",
     location: "Boa Vista, RR",
     before: "R$ 2.400",
     after: "R$ 180",
     annualSavings: "R$ 26.640",
     system: "12 kWp",
-    placeholder: true,
   },
   {
-    /* TODO: Substituir por foto real → /projetos/projeto-comercial.jpg */
-    image: "/proof-commercial.png",
+    // SUBSTITUIR POR FOTO REAL DA PROSOLAR — Comercial
+    image: "/projetos/projeto-comercial.png",
     type: "Comercial",
-    location: "Belém, PA",
+    location: "Boa Vista, RR",
     before: "R$ 8.500",
     after: "R$ 650",
     annualSavings: "R$ 94.200",
     system: "45 kWp",
-    placeholder: true,
   },
   {
-    /* TODO: Substituir por foto real → /projetos/projeto-rural.jpg */
-    image: "/proof-rural.png",
+    // SUBSTITUIR POR FOTO REAL DA PROSOLAR — Rural/Industrial
+    image: "/projetos/projeto-rural.png",
     type: "Rural",
-    location: "Manaus, AM",
+    location: "Roraima",
     before: "R$ 3.200",
     after: "R$ 240",
     annualSavings: "R$ 35.520",
     system: "18 kWp",
-    placeholder: true,
   },
 ];
 
@@ -66,7 +63,7 @@ export function SocialProof() {
 
         {/* Cases grid */}
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
-          {CASES.map(({ image, type, location, before, after, annualSavings, system, placeholder }, i) => (
+          {CASES.map(({ image, type, location, before, after, annualSavings, system }, i) => (
             <div
               key={type}
               className={`group overflow-hidden rounded-2xl bg-white border border-border shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${
@@ -78,7 +75,7 @@ export function SocialProof() {
               <div className="relative overflow-hidden">
                 <img
                   src={image}
-                  alt={`Projeto solar ${type} em ${location}${placeholder ? " — Imagem real do projeto: substituir posteriormente" : ""}`}
+                  alt={`Projeto solar ${type} Prosolar em ${location}`}
                   className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
