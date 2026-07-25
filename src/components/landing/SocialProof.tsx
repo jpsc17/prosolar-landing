@@ -46,14 +46,14 @@ export function SocialProof() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="projetos" className="py-20 sm:py-28 bg-white" ref={ref}>
+    <section id="projetos" className="py-16 sm:py-28 bg-white" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`mx-auto max-w-3xl text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <span className="text-sm font-semibold uppercase tracking-widest text-solar-dark">
             Resultados Reais
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
             Veja a economia que nossos clientes alcançaram
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -62,7 +62,7 @@ export function SocialProof() {
         </div>
 
         {/* Cases grid */}
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {CASES.map(({ image, type, location, before, after, annualSavings, system }, i) => (
             <div
               key={type}
@@ -89,7 +89,7 @@ export function SocialProof() {
               </div>
 
               {/* Before / After */}
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-xl bg-red-50 p-4 text-center">
                     <span className="text-xs font-semibold uppercase tracking-wider text-red-400">Antes</span>
@@ -105,10 +105,10 @@ export function SocialProof() {
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center justify-between rounded-xl bg-solar/10 p-4">
+                <div className="mt-3 flex items-center justify-between rounded-xl bg-solar/10 p-3 sm:mt-4 sm:p-4">
                   <div>
                     <span className="text-xs font-semibold text-solar-dark uppercase tracking-wider">Economia Anual</span>
-                    <div className="font-heading text-2xl font-extrabold text-navy">{annualSavings}</div>
+                    <div className="font-heading text-xl font-extrabold text-navy sm:text-2xl">{annualSavings}</div>
                   </div>
                   <div className="text-right">
                     <span className="text-xs font-semibold text-muted-foreground">Sistema</span>

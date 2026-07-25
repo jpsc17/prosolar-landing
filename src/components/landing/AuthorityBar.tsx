@@ -12,7 +12,7 @@ function Metric({ end, suffix, label, prefix = "" }: MetricProps) {
 
   return (
     <div className="flex flex-col items-center text-center" ref={ref as React.RefObject<HTMLDivElement>}>
-      <span className="font-heading text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+      <span className="font-heading text-2xl font-extrabold text-white sm:text-3xl md:text-4xl lg:text-5xl">
         {prefix}{count.toLocaleString("pt-BR")}{suffix}
       </span>
       <span className="mt-1.5 text-sm font-medium text-white/60 sm:text-base">

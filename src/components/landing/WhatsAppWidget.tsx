@@ -7,7 +7,7 @@ export function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 sm:bottom-5 sm:right-5">
       {/* Expanded widget */}
       {isOpen && (
         <div className="animate-scale-in w-72 rounded-2xl bg-white shadow-2xl border border-border overflow-hidden origin-bottom-right">

@@ -2,9 +2,9 @@ import { Sun, Phone, MapPin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer id="contato" className="bg-navy-dark py-14 text-white">
+    <footer id="contato" className="bg-navy-dark py-10 sm:py-14 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/40">
+        <div className="mt-8 border-t border-white/10 pt-5 text-center text-xs text-white/40 sm:mt-12 sm:pt-6">
           &copy; {new Date().getFullYear()} Prosolar Energia Fotovoltaica. Todos os direitos reservados.
         </div>
       </div>

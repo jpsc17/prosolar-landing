@@ -62,7 +62,7 @@ export function Simulator() {
   return (
     <section
       id="simulador"
-      className="relative py-20 sm:py-28 overflow-hidden"
+      className="relative py-16 sm:py-28 overflow-hidden"
       ref={ref}
     >
       {/* Background */}
@@ -75,7 +75,7 @@ export function Simulator() {
           <span className="text-sm font-semibold uppercase tracking-widest text-solar-dark">
             Simulador de Economia
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
             Descubra Quanto Dinheiro Você Está Entregando Para a Concessionária
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -85,7 +85,7 @@ export function Simulator() {
 
         {/* Simulator Card */}
         <div className="mx-auto mt-12 max-w-4xl">
-          <div className="relative rounded-3xl border border-white/60 bg-white p-6 shadow-2xl shadow-navy/5 sm:p-10">
+          <div className="relative rounded-2xl sm:rounded-3xl border border-white/60 bg-white p-5 shadow-2xl shadow-navy/5 sm:p-10">
             {/* Glow effect */}
             <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-solar/20 via-transparent to-navy/10 -z-10 blur-sm" />
 
@@ -99,7 +99,7 @@ export function Simulator() {
                   <button
                     key={id}
                     onClick={() => setProfile(id)}
-                    className={`rounded-xl border-2 px-4 py-3.5 text-center font-semibold transition-all ${
+                    className={`rounded-xl border-2 px-3 py-3 sm:px-4 sm:py-3.5 text-center font-semibold transition-all ${
                       profile === id
                         ? "border-solar bg-solar/10 text-navy shadow-sm"
                         : "border-border bg-white text-muted-foreground hover:border-solar/40 hover:bg-solar/5"
@@ -118,7 +118,7 @@ export function Simulator() {
                 <label className="text-sm font-semibold text-navy uppercase tracking-wider">
                   Valor Mensal da Conta
                 </label>
-                <span className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">
+                <span className="font-heading text-xl font-extrabold text-navy sm:text-2xl md:text-3xl">
                   R$ {bill.toLocaleString("pt-BR")}
                 </span>
               </div>
@@ -171,7 +171,7 @@ export function Simulator() {
                   <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-solar-dark">
                     Sua Economia Estimada
                   </h3>
-                  <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
                     <ResultCard
                       icon={TrendingUp}
                       value={`R$ ${result.annualSavings.toLocaleString("pt-BR", { maximumFractionDigits: 0 })}`}
@@ -201,7 +201,7 @@ export function Simulator() {
                     href={`${WHATSAPP_BASE}?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-pulse inline-flex items-center gap-2.5 rounded-full bg-solar px-8 py-4 text-base font-bold text-navy shadow-lg transition-all hover:bg-solar-dark hover:shadow-xl active:scale-[0.98] sm:text-lg"
+                    className="btn-pulse inline-flex items-center gap-2 rounded-full bg-solar px-5 py-3.5 text-sm font-bold text-navy shadow-lg transition-all hover:bg-solar-dark hover:shadow-xl active:scale-[0.98] sm:gap-2.5 sm:px-8 sm:py-4 sm:text-base md:text-lg"
                   >
                     Receber Simulação Completa no WhatsApp
                     <ArrowRight className="h-5 w-5" strokeWidth={2.5} />
@@ -218,7 +218,7 @@ export function Simulator() {
               <div className="mt-8 text-center">
                 <button
                   onClick={() => setShowResult(true)}
-                  className="btn-pulse inline-flex items-center gap-2.5 rounded-full bg-solar px-8 py-4 text-base font-bold text-navy shadow-lg transition-all hover:bg-solar-dark hover:shadow-xl active:scale-[0.98] sm:text-lg"
+                  className="btn-pulse inline-flex items-center gap-2 rounded-full bg-solar px-6 py-3.5 text-sm font-bold text-navy shadow-lg transition-all hover:bg-solar-dark hover:shadow-xl active:scale-[0.98] sm:gap-2.5 sm:px-8 sm:py-4 sm:text-base md:text-lg"
                 >
                   Calcular Minha Economia
                   <ArrowRight className="h-5 w-5" strokeWidth={2.5} />
@@ -242,9 +242,9 @@ function ResultCard({
   label: string;
 }) {
   return (
-    <div className="rounded-xl bg-white p-5 text-center shadow-sm transition-all hover:shadow-md">
+    <div className="rounded-xl bg-white p-4 text-center shadow-sm transition-all hover:shadow-md sm:p-5">
       <Icon className="mx-auto h-6 w-6 text-solar" strokeWidth={2} />
-      <div className="mt-3 font-heading text-xl font-extrabold text-navy sm:text-2xl">
+      <div className="mt-2 font-heading text-base font-extrabold text-navy sm:mt-3 sm:text-xl md:text-2xl">
         {value}
       </div>
       <div className="mt-1 text-xs font-medium text-muted-foreground">

@@ -40,20 +40,20 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
+    <section id="faq" className="py-16 sm:py-28 bg-gray-bg" ref={ref}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <span className="text-sm font-semibold uppercase tracking-widest text-solar-dark">
             Dúvidas Frequentes
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl">
             Perguntas Frequentes
           </h2>
         </div>
 
         {/* Accordion */}
-        <div className="mt-12 space-y-3">
+        <div className="mt-8 space-y-3 sm:mt-12">
           {FAQS.map(({ question, answer }, i) => {
             const isOpen = openIndex === i;
 
@@ -67,9 +67,9 @@ export function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-gray-bg/50"
+                  className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left transition-colors hover:bg-gray-bg/50 sm:gap-4 sm:px-6 sm:py-5"
                 >
-                  <span className="font-heading text-base font-semibold text-navy pr-4">
+                  <span className="font-heading text-sm font-semibold text-navy pr-2 sm:text-base sm:pr-4">
                     {question}
                   </span>
                   <ChevronDown
@@ -87,7 +87,7 @@ export function FAQ() {
                   }}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">
+                    <div className="px-4 pb-4 text-sm leading-relaxed text-muted-foreground sm:px-6 sm:pb-5">
                       {answer}
                     </div>
                   </div>

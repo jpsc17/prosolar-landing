@@ -42,32 +42,32 @@ export function WhyProsolar() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
+    <section className="py-16 sm:py-28 bg-gray-bg" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-20">
           {/* Left — content */}
           <div className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}>
             <span className="text-sm font-semibold uppercase tracking-widest text-solar-dark">
               Diferenciais
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
               Por que escolher a Prosolar?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground sm:text-lg">
               Não somos apenas mais uma empresa de energia solar. Somos engenheiros especializados com atuação consolidada na Região Norte, entregando projetos com máxima performance e total segurança.
             </p>
 
-            <div className="mt-10 space-y-6">
+            <div className="mt-8 space-y-5 sm:mt-10 sm:space-y-6">
               {DIFFERENTIALS.map(({ icon: Icon, title, desc }, i) => (
                 <div
                   key={title}
-                  className={`flex gap-5 transition-all duration-500 ${
+                  className={`flex gap-4 sm:gap-5 transition-all duration-500 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                   }`}
                   style={{ transitionDelay: isVisible ? `${(i + 1) * 100}ms` : "0ms" }}
                 >
-                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-solar/15">
-                    <Icon className="h-6 w-6 text-solar-dark" strokeWidth={1.8} />
+                  <div className="grid h-10 w-10 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-xl bg-solar/15">
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-solar-dark" strokeWidth={1.8} />
                   </div>
                   <div>
                     <h3 className="font-heading text-base font-bold text-navy">{title}</h3>
@@ -95,16 +95,16 @@ export function WhyProsolar() {
             <img
               src="/projetos/projeto-residencial.jpg"
               alt="Projeto solar Prosolar — Instalação real"
-              className="w-full rounded-2xl object-cover shadow-xl aspect-[4/5]"
+              className="w-full rounded-2xl object-cover shadow-xl aspect-[3/2] sm:aspect-[4/5]"
               loading="lazy"
             />
 
             {/* CREA badge */}
-            <div className="absolute -bottom-4 -right-2 rounded-2xl bg-navy p-5 text-white shadow-xl sm:-bottom-6 sm:-right-4">
+            <div className="absolute -bottom-2 -right-1 rounded-xl bg-navy p-3 text-white shadow-xl sm:-bottom-6 sm:-right-4 sm:rounded-2xl sm:p-5">
               <div className="flex items-center gap-3">
-                <ShieldCheck className="h-8 w-8 text-solar" strokeWidth={2} />
+                <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-solar" strokeWidth={2} />
                 <div>
-                  <div className="font-heading text-2xl font-extrabold">CREA</div>
+                  <div className="font-heading text-lg sm:text-2xl font-extrabold">CREA</div>
                   <div className="text-xs text-white/70">Engenharia Certificada</div>
                 </div>
               </div>

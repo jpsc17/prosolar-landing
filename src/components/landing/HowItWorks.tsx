@@ -33,23 +33,23 @@ export function HowItWorks() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="como-funciona" className="py-20 sm:py-28 bg-gray-bg" ref={ref}>
+    <section id="como-funciona" className="py-16 sm:py-28 bg-gray-bg" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`mx-auto max-w-3xl text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <span className="text-sm font-semibold uppercase tracking-widest text-solar-dark">
             Processo
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
             Como Funciona
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-3 text-base text-muted-foreground sm:text-lg">
             Do primeiro contato à economia na conta de luz, em 5 passos simples.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative mx-auto mt-16 max-w-3xl">
+        <div className="relative mx-auto mt-10 max-w-3xl sm:mt-16">
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border sm:left-1/2 sm:-translate-x-px" />
 
@@ -65,7 +65,7 @@ export function HowItWorks() {
                 style={{ transitionDelay: isVisible ? `${(i + 1) * 150}ms` : "0ms" }}
               >
                 {/* Mobile: all left-aligned. Desktop: alternating */}
-                <div className={`flex items-start gap-6 sm:gap-0 ${
+                <div className={`flex items-start gap-4 pl-14 sm:pl-0 sm:gap-0 ${
                   isLeft ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}>
                   {/* Content card */}
@@ -86,7 +86,7 @@ export function HowItWorks() {
                   </div>
 
                   {/* Timeline dot */}
-                  <div className="absolute left-6 sm:left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute left-0 sm:left-1/2 -translate-x-1/2 z-10">
                     <div className="grid h-12 w-12 place-items-center rounded-full bg-navy shadow-lg ring-4 ring-white transition-colors">
                       <Icon className="h-5 w-5 text-solar" strokeWidth={2} />
                     </div>

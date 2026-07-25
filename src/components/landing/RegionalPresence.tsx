@@ -15,7 +15,7 @@ export function RegionalPresence() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 sm:py-28 bg-navy relative overflow-hidden" ref={ref}>
+    <section className="py-16 sm:py-28 bg-navy relative overflow-hidden" ref={ref}>
       {/* Decorative */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
@@ -25,11 +25,11 @@ export function RegionalPresence() {
       <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-solar/5 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-20">
           {/* Left — Map Illustration */}
           <div className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}>
             {/* Stylized map representation */}
-            <div className="relative rounded-3xl bg-navy-dark/50 border border-white/5 p-8 sm:p-12 overflow-hidden">
+            <div className="relative rounded-2xl sm:rounded-3xl bg-navy-dark/50 border border-white/5 p-5 sm:p-8 md:p-12 overflow-hidden">
               {/* Background grid representing map */}
               <div className="absolute inset-0 opacity-10" style={{
                 backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
@@ -37,7 +37,7 @@ export function RegionalPresence() {
               }} />
 
               {/* State dots on "map" */}
-              <div className="relative grid grid-cols-3 gap-6 sm:gap-8">
+              <div className="relative grid grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                 {STATES.map(({ name, abbr, highlight, desc }, i) => (
                   <div
                     key={abbr}
@@ -46,12 +46,12 @@ export function RegionalPresence() {
                     }`}
                     style={{ transitionDelay: isVisible ? `${(i + 1) * 100}ms` : "0ms" }}
                   >
-                    <div className={`grid h-16 w-16 sm:h-20 sm:w-20 place-items-center rounded-2xl transition-all ${
+                    <div className={`grid h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 place-items-center rounded-xl sm:rounded-2xl transition-all ${
                       highlight
                         ? "bg-solar shadow-lg shadow-solar/20"
                         : "bg-white/10 border border-white/10"
                     }`}>
-                      <span className={`font-heading text-xl sm:text-2xl font-extrabold ${
+                      <span className={`font-heading text-lg sm:text-xl md:text-2xl font-extrabold ${
                         highlight ? "text-navy" : "text-white/80"
                       }`}>
                         {abbr}
@@ -82,10 +82,10 @@ export function RegionalPresence() {
             <span className="text-sm font-semibold uppercase tracking-widest text-solar">
               Presença Regional
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               Onde Atuamos
             </h2>
-            <p className="mt-4 text-lg text-white/60 leading-relaxed">
+            <p className="mt-3 text-base text-white/60 leading-relaxed sm:text-lg">
               Levamos soluções fotovoltaicas para residências, empresas e propriedades rurais em toda a <strong className="text-white font-semibold">Região Norte do Brasil</strong>.
             </p>
 

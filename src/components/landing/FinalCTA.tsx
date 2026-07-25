@@ -7,7 +7,7 @@ export function FinalCTA() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="relative py-20 sm:py-28 overflow-hidden" ref={ref}>
+    <section className="relative py-16 sm:py-28 overflow-hidden" ref={ref}>
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-dark to-[#040d26] -z-10" />
 
@@ -26,20 +26,20 @@ export function FinalCTA() {
           Não perca mais tempo
         </span>
 
-        <h2 className="mt-4 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-[1.1]">
+        <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-white leading-[1.15] sm:mt-4 sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[1.1]">
           Todo mês que você espera é dinheiro que continua indo para a concessionária.
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60">
+        <p className="mx-auto mt-4 max-w-2xl text-base text-white/60 sm:mt-6 sm:text-lg">
           Fale agora com um engenheiro da Prosolar e descubra quanto você pode economizar. A simulação é gratuita e sem compromisso.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-pulse inline-flex items-center gap-3 rounded-full bg-solar px-10 py-5 text-lg font-extrabold text-navy shadow-2xl shadow-solar/25 transition-all hover:bg-solar-dark hover:shadow-solar/40 active:scale-[0.98] sm:text-xl"
+            className="btn-pulse inline-flex items-center gap-2 rounded-full bg-solar px-6 py-4 text-base font-extrabold text-navy shadow-2xl shadow-solar/25 transition-all hover:bg-solar-dark hover:shadow-solar/40 active:scale-[0.98] sm:gap-3 sm:px-10 sm:py-5 sm:text-lg md:text-xl"
           >
             Quero Minha Simulação Gratuita
             <ArrowRight className="h-6 w-6" strokeWidth={2.5} />
