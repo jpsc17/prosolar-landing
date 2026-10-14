@@ -12,7 +12,8 @@ const WHATSAPP_URL = "https://wa.me/5591982298619?text=Ol%C3%A1!%20Vi%20os%20cas
 const CASES = [
   {
     image: "/projetos/instalacao-fachada-drone.jpg",
-    type: "Residencial — Instalação Completa",
+    type: "Residencial",
+    badge: "Homologado",
     location: "Boa Vista, RR",
     before: "R$ 2.400",
     after: "R$ 180",
@@ -21,7 +22,8 @@ const CASES = [
   },
   {
     image: "/projetos/foto-tecnico-inversores.jpg",
-    type: "Padrão Técnico & Inversores Homologados",
+    type: "Engenharia Técnica",
+    badge: "Inversores Certificados",
     location: "Região Norte",
     before: "R$ 3.800",
     after: "R$ 250",
@@ -29,13 +31,24 @@ const CASES = [
     system: "16 kWp",
   },
   {
-    image: "/projetos/instalacao-aerea-geral.jpg",
-    type: "Residencial & Microempresa",
+    image: "/projetos/instalacao-drone-telhado.jpg",
+    type: "Residencial Premium",
+    badge: "Alta Eficiência",
     location: "Região Norte",
-    before: "R$ 5.200",
-    after: "R$ 390",
-    annualSavings: "R$ 57.720",
-    system: "24 kWp",
+    before: "R$ 4.500",
+    after: "R$ 320",
+    annualSavings: "R$ 50.160",
+    system: "22 kWp",
+  },
+  {
+    image: "/projetos/instalacao-aerea-geral.jpg",
+    type: "Comércio / PME",
+    badge: "Chave na Mão",
+    location: "Região Norte",
+    before: "R$ 6.200",
+    after: "R$ 450",
+    annualSavings: "R$ 69.000",
+    system: "32 kWp",
   },
 ];
 
@@ -43,74 +56,76 @@ export function SocialProof() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="projetos" className="py-16 sm:py-28 bg-white" ref={ref}>
+    <section id="projetos" className="py-20 sm:py-32 bg-slate-50/70 border-y border-slate-200/60" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`mx-auto max-w-3xl text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <span className="text-sm font-semibold uppercase tracking-widest text-solar-dark">
-            Resultados Reais
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 border border-amber-300">
+            ★ Casos Reais Entregues
           </span>
-          <h2 className="mt-3 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
-            Veja a economia que nossos clientes alcançaram
+          <h2 className="mt-4 font-heading text-2xl font-extrabold tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
+            Projetos Reais da Prosolar Gerando <span className="gradient-text-solar">Economia Todo Mês</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Projetos entregues em toda a Região Norte do Brasil.
+          <p className="mt-4 text-base sm:text-lg text-slate-600">
+            Veja como clientes residenciais e comerciais no Norte transformaram suas despesas fixas em economia limpa.
           </p>
         </div>
 
         {/* Cases grid */}
-        <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {CASES.map(({ image, type, location, before, after, annualSavings, system }, i) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {CASES.map(({ image, type, badge, location, before, after, annualSavings, system }, i) => (
             <div
               key={type}
-              className={`group overflow-hidden rounded-2xl bg-white border border-border shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${
+              className={`group overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-amber-400 flex flex-col justify-between ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
-              style={{ transitionDelay: isVisible ? `${(i + 1) * 150}ms` : "0ms" }}
+              style={{ transitionDelay: isVisible ? `${(i + 1) * 120}ms` : "0ms" }}
             >
-              {/* Image */}
-              <div className="relative overflow-hidden">
+              {/* Image com Badges */}
+              <div className="relative overflow-hidden aspect-[4/3]">
                 <img
                   src={image}
                   alt={`Projeto solar ${type} Prosolar em ${location}`}
-                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                   loading="lazy"
                 />
-                <div className="absolute top-3 left-3 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1.5 text-xs font-semibold text-navy shadow-sm">
-                  <MapPin className="h-3 w-3 text-solar" />
-                  {location}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+                
+                <div className="absolute top-3 left-3 flex items-center gap-1 rounded-full bg-black/60 backdrop-blur-md px-2.5 py-1 text-[11px] font-semibold text-white">
+                  <MapPin className="h-3 w-3 text-amber-400" />
+                  <span>{location}</span>
                 </div>
-                <div className="absolute top-3 right-3 rounded-full bg-navy/90 px-3 py-1.5 text-xs font-bold text-white">
-                  {type}
+
+                <div className="absolute top-3 right-3 rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-extrabold text-slate-950 uppercase shadow-xs">
+                  {badge}
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-bold">
+                  <span className="text-sm font-heading">{type}</span>
+                  <span className="bg-white/20 backdrop-blur-md px-2 py-0.5 rounded-md text-[11px]">{system}</span>
                 </div>
               </div>
 
-              {/* Before / After */}
-              <div className="p-5 sm:p-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-xl bg-red-50 p-4 text-center">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-red-400">Antes</span>
-                    <div className="mt-1 font-heading text-xl font-extrabold text-red-600 line-through decoration-2">
-                      {before}<span className="text-sm font-normal">/mês</span>
+              {/* Before / After & Economia */}
+              <div className="p-4 sm:p-5 space-y-3 flex-1 flex flex-col justify-between">
+                <div className="grid grid-cols-2 gap-2 text-center">
+                  <div className="rounded-xl bg-red-50/80 border border-red-200/60 p-2.5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-red-500">Antes</span>
+                    <div className="font-heading text-base font-extrabold text-red-700 line-through decoration-2">
+                      {before}
                     </div>
                   </div>
-                  <div className="rounded-xl bg-emerald-50 p-4 text-center">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-emerald-500">Depois</span>
-                    <div className="mt-1 font-heading text-xl font-extrabold text-emerald-600">
-                      {after}<span className="text-sm font-normal">/mês</span>
+                  <div className="rounded-xl bg-emerald-50/90 border border-emerald-200/80 p-2.5 shadow-2xs">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Depois</span>
+                    <div className="font-heading text-base font-extrabold text-emerald-700">
+                      {after}
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-3 flex items-center justify-between rounded-xl bg-solar/10 p-3 sm:mt-4 sm:p-4">
-                  <div>
-                    <span className="text-xs font-semibold text-solar-dark uppercase tracking-wider">Economia Anual</span>
-                    <div className="font-heading text-xl font-extrabold text-navy sm:text-2xl">{annualSavings}</div>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-xs font-semibold text-muted-foreground">Sistema</span>
-                    <div className="font-heading text-lg font-bold text-navy">{system}</div>
-                  </div>
+                <div className="rounded-xl bg-gradient-to-r from-amber-50 via-amber-100/60 to-white p-3 border border-amber-200 text-center">
+                  <span className="text-[10px] font-bold text-amber-800 uppercase tracking-wider block">Economia no 1º Ano</span>
+                  <div className="font-heading text-lg font-extrabold text-navy">{annualSavings}</div>
                 </div>
               </div>
             </div>
@@ -123,10 +138,10 @@ export function SocialProof() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-navy-dark hover:shadow-lg active:scale-[0.98]"
+            className="btn-shimmer inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-navy to-navy-dark px-8 py-4 text-sm sm:text-base font-bold text-white shadow-lg hover:shadow-xl transition-all active:scale-[0.98]"
           >
-            Quero resultados como esses
-            <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            <span>Quero Uma Economia Como Essa</span>
+            <ArrowRight className="h-4 w-4 text-amber-400" strokeWidth={2.5} />
           </a>
         </div>
       </div>
