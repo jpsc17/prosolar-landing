@@ -77,10 +77,10 @@ export function Hero() {
             {/* Glow behind image */}
             <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-solar/20 via-transparent to-navy/10 blur-3xl" />
 
-            {/* SUBSTITUIR POR FOTO REAL DA PROSOLAR — Hero principal */}
+            {/* Foto real da Prosolar — Instalação fotovoltaica com drone */}
             <img
-              src="/projetos/projeto-comercial.png"
-              alt="Instalação solar premium pela Prosolar na Região Norte do Brasil"
+              src="/projetos/instalacao-drone-telhado.jpg"
+              alt="Instalação fotovoltaica residencial de alta potência pela Prosolar"
               className="w-full rounded-2xl object-cover shadow-2xl aspect-[4/3] sm:aspect-[4/5] lg:aspect-[3/4]"
               loading="eager"
             />

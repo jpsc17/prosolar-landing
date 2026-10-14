@@ -11,9 +11,8 @@ const WHATSAPP_URL = "https://wa.me/5591982298619?text=Ol%C3%A1!%20Vi%20os%20cas
  */
 const CASES = [
   {
-    // SUBSTITUIR POR FOTO REAL DA PROSOLAR — Residencial
-    image: "/projetos/projeto-residencial.jpg",
-    type: "Residencial",
+    image: "/projetos/instalacao-fachada-drone.jpg",
+    type: "Residencial — Instalação Completa",
     location: "Boa Vista, RR",
     before: "R$ 2.400",
     after: "R$ 180",
@@ -21,24 +20,22 @@ const CASES = [
     system: "12 kWp",
   },
   {
-    // SUBSTITUIR POR FOTO REAL DA PROSOLAR — Comercial
-    image: "/projetos/projeto-comercial.png",
-    type: "Comercial",
-    location: "Boa Vista, RR",
-    before: "R$ 8.500",
-    after: "R$ 650",
-    annualSavings: "R$ 94.200",
-    system: "45 kWp",
+    image: "/projetos/foto-tecnico-inversores.jpg",
+    type: "Padrão Técnico & Inversores Homologados",
+    location: "Região Norte",
+    before: "R$ 3.800",
+    after: "R$ 250",
+    annualSavings: "R$ 42.600",
+    system: "16 kWp",
   },
   {
-    // SUBSTITUIR POR FOTO REAL DA PROSOLAR — Rural/Industrial
-    image: "/projetos/projeto-rural.png",
-    type: "Rural",
-    location: "Roraima",
-    before: "R$ 3.200",
-    after: "R$ 240",
-    annualSavings: "R$ 35.520",
-    system: "18 kWp",
+    image: "/projetos/instalacao-aerea-geral.jpg",
+    type: "Residencial & Microempresa",
+    location: "Região Norte",
+    before: "R$ 5.200",
+    after: "R$ 390",
+    annualSavings: "R$ 57.720",
+    system: "24 kWp",
   },
 ];
 

@@ -91,11 +91,11 @@ export function WhyProsolar() {
           {/* Right — visual */}
           <div className={`relative transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
             <div className="absolute -inset-4 rounded-3xl bg-navy/5 -z-10" />
-            {/* SUBSTITUIR POR FOTO REAL DA PROSOLAR — Equipe/engenheiro */}
+            {/* Foto real da Prosolar — Especialista e Inversores Homologados */}
             <img
-              src="/projetos/projeto-residencial.jpg"
-              alt="Projeto solar Prosolar — Instalação real"
-              className="w-full rounded-2xl object-cover shadow-xl aspect-[3/2] sm:aspect-[4/5]"
+              src="/projetos/foto-tecnico-inversores.jpg"
+              alt="Especialista Prosolar com inversores homologados e padrão técnico certificado"
+              className="w-full rounded-2xl object-cover shadow-xl aspect-[3/4] sm:aspect-[4/5] object-top"
               loading="lazy"
             />
 
